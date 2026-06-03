@@ -5,8 +5,21 @@
     <link rel="icon" type="image/svg+xml" href="/assets/logo2.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UDCK-BOOKING</title>
+      <!-- 1. THÊM DÒNG NÀY VÀO TRONG HEAD -->
+    <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- 2. THÊM ĐOẠN SCRIPT NÀY VÀO CUỐI BODY -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(() => console.log('PWA đã sẵn sàng!'))
+          .catch((err) => console.log('Lỗi PWA:', err));
+      }
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
