@@ -38,7 +38,7 @@ export const MainLayout = ({
 
   const handleLogout = () => {
     logoutUser();
-    navigate("/");
+    navigate("/login");
   };
 
   const handleToggleSidebar = () => {
